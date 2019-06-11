@@ -24,29 +24,46 @@ Dal grafico sulla destra si può osservare che l'importo associato ai costi rela
 
 Dal grafico sembra mostrare che, nonostante il D.Lgs. 50/2016, la spesa legata alla sicurezza sui luoghi di lavoro sia in diminuzione. Se filtriamo il dataset considerando solo i campi relativi a "lavoro" come tipologia di appalto, il risultato è diverso: escudendo gli appalti relativi ai servizi ed alle forniture, per i quali la sicurezza sul luogo di lavoro gioca un ruolo meno importante, la spesa relativa alla sicurezza risulta essere stabile nel tempo.
 
-![andamento percentuale sicurezza](./plots/andamento_percentuale_sicurezza_lavori.png)
+![andamento percentuale sicurezza lavori](./plots/andamento_percentuale_sicurezza_lavori.png)
 
 
 
 ## Tipologia e settore di appalto
 
-![tipologie e settore di appalto](./plots/tipo_e_settore.png)
+Dal 2006, con il decreto legislativo 163/2006, gli appalti pubblici possono far parte di tre diverse categorie: di lavori, di forniture o di servizi<sup>[2](#tipologie)</sup>:
+
+
+- Appalti pubblici di lavori (e.g. attività di costruzione, demolizione, recupero, ristrutturazione, restauro e manutenzione di opere)
+- Appalti pubblici di forniture (e.g. acquisto, locazione finanziaria, locazione o acquisto a riscatto di prodotti)
+- Appalti pubblici di servizi (definiti dall'allegato II del D.Lgs. 163/2006)
+
+![tipologie di appalto](./plots/tipo_appalto.png)
+
+Notiamo dal grafico sulla sinistra che l'importo di spesa totale per le diverse categorie è distribuito in modo omogeneo e, dal grafico centrale, che grande maggioranza di appalti riguarda la tipologia *lavori*. Il grafico sulla destra conferma che le tipologie di appalto riferite ai *lavori* richiedono una maggiore spesa relativa alla sicurezza. 
+
+---------------
+
+Una seconda classificazione della tipologia di appalto è quella che divide gli appalti ordinari e speciali. La topologia *appalto speciale*<sup>[3](#appaltospeciale)</sup> è frutto della direttiva europea 2014/25/UE, che identifica come appalti speciali quelli inerenti ad acqua, energia, trasporti e servizi postali. Questi settori vengono considerati *speciali* in quanto riguardano attività corrispondenti a bisogni fondamentali dei cittadini europei.
+
+![tipologie di appalto](./plots/settore_appalto.png)
+
+Notiamo che la maggior parte degli appalti vinti riguarda il settore ordinario, mentre i costi legati al settore speciale sono in media molto più alti (circa 10 volte maggiori).
+
+## Distribuzione geografica
+
+Da un punto di vista territoriale la spesa relativa agli appalti pubblici sembra essere distribuita in modo abbastanza omogeneo, ad eccezione della provincia romana. Nella provincia della capitale sono stati vinti appalti per un totale di circa 47 miliardi di euro tra il 2014 e il 2019, e a questa, segue con un grandissimo scarto la provincia di Milano con 3.2 miliardi. La media nazionale di spesa per provincia è di circa 780 milioni di euro, che corrispondono a circa 156 milioni di spesa annua. Riportiamo in grafico l'importo totale dei concorsi pubblici tra il primo gennaio del 2014 ed il primo gennaio del 2019 divisi per regione.
+
+![media spesa province](./plots/totale_2014_2019_geo.png)
 
 
 
+----------------
 
+## Referenze
 
-
-
-
-
-
-
-<a name="refpuntosicuro">1</a>: https://www.puntosicuro.it/sicurezza-sul-lavoro-C-1/tipologie-di-contenuto-C-6/appalti-costi-della-sicurezza-C-115/appalti-di-forniture-servizi-costi-della-sicurezza-normativa-AR-17740/ - Copyright © All Rights reserved 1999-2019 - All Rights Reserved.
-
-
-
-
+<a name="refpuntosicuro">1</a>: https://www.puntosicuro.it/sicurezza-sul-lavoro-C-1/tipologie-di-contenuto-C-6/appalti-costi-della-sicurezza-C-115/appalti-di-forniture-servizi-costi-della-sicurezza-normativa-AR-17740/ - Copyright © All Rights reserved 1999-2019 - All Rights Reserved.<br>
+<a name="tipologie">2</a>: https://www.tuttocauzioni.it/appalti-pubblici/fondamenti-appalti-pubblici.<br>
+<a name="appaltospeciale">3</a>: https://www.michelerizzolaw.com/it/gli-appalti-nei-settori-speciali-le-novita-contenute-nel-d-lgs-50-2016/.<br>
 
 
 

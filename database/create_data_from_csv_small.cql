@@ -10,7 +10,7 @@ AS row
 MERGE (gara:Gara {id_gara:row.id_gara, oggetto_della_gara:row.oggetto_della_gara})
 	ON CREATE SET
 		gara.cf_rup = row.cf_rup,
-		gara.tipo_appalto = row.tipo_appalto
+		gara.tipo_appalto = row.tipo_appalto,
 		gara.soggetto_per_cui_agisce_la_sa = row.soggetto_per_cui_agisce_la_sa
 
 // Responsabile
@@ -19,14 +19,14 @@ MERGE (responsabile:Responsabile {cf_rup:row.cf_rup})
         responsabile.rup = row.rup
 
 // Appalto
-MERGE (appalto:Appalto {tipo_appalto:row.tipo_appalto});
+MERGE (appalto:Appalto {tipo_appalto:row.tipo_appalto})
 
 // Lotto
 MERGE (lotto:Lotto {id_lotto: row.id_lotto})
 
 // Committente
-MERGE (committente:Committente {soggetto_per_cui_agisce_la_sa=row.soggetto_per_cui_agisce_la_sa})
-;
+MERGE (committente:Committente {soggetto_per_cui_agisce_la_sa:row.soggetto_per_cui_agisce_la_sa});
+
 
 // Creazione relazioni
 // Gara - Responsabile
